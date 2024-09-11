@@ -534,21 +534,20 @@ footer li {
   .timeline li .timeline-panel::after {
     top: 31px;
   }
+}
+@media (max-width: 400px) {
+  .simply-countdown > .simply-section {
+    padding: 35px;
+    margin: 4px;
+  }
 
-  @media (max-width: 400px) {
-    .simply-countdown > .simply-section {
-      padding: 35px;
-      margin: 4px;
-    }
+  .timeline li .timeline-image {
+    width: 100px;
+    height: 100px;
+  }
 
-    .timeline li .timeline-image {
-      width: 100px;
-      height: 100px;
-    }
-
-    .timeline li .timeline-panel {
-      width: 200px;
-      float: right;
-    }
+  .timeline li .timeline-panel {
+    width: 200px;
+    float: right;
   }
 }
