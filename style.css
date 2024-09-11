@@ -223,7 +223,7 @@ body {
   top: 0;
   bottom: 0;
   position: absolute;
-  width: 1px;
+  width: 2px;
   background-color: #ccc;
   left: 50%;
 }
@@ -310,7 +310,7 @@ body {
 
 /* Gallery Section */
 .gallery {
-  background-color: #e0dadd;
+  background-color: #f5f5f5;
 }
 
 /* Responsive */
@@ -439,5 +439,22 @@ body {
   }
   .timeline li .timeline-panel::after {
     top: 31px;
+  }
+
+  @media (max-width: 400px) {
+    .simply-countdown > .simply-section {
+      padding: 35px;
+      margin: 4px;
+    }
+
+    .timeline li .timeline-image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .timeline li .timeline-panel {
+      width: 200px;
+      float: right;
+    }
   }
 }
