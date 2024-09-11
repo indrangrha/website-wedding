@@ -446,12 +446,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
     <script>
       const stickyTop = document.querySelector(".sticky-top");
+      const hm = document.querySelector(".navbar-toggler");
       const offCanvas = document.querySelector(".offcanvas");
 
-      offCanvas.addEventListener("show.bs.offcanvas", () => {
+      hm.addEventListener("click", () => {
         stickyTop.style.overflow = "visible";
       });
-
+      // offCanvas.addEventListener("show.bs.offcanvas", () => {
+      //   stickyTop.style.overflow = "visible";
+      // });
       offCanvas.addEventListener("hidden.bs.offcanvas", () => {
         stickyTop.style.overflow = "hidden";
       });
