@@ -423,8 +423,8 @@
         <i class="bi bi-disc"></i>
       </div>
     </div>
-
     <!-- Audio End -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
@@ -480,6 +480,7 @@
         rootElement.style.scrollBehavior = "auto";
       }
 
+      // Ketika undangan bisa discroll
       function enableScroll() {
         window.onscroll = () => {
           rootElement.style.scrollBehavior = "smooth";
@@ -488,20 +489,27 @@
         // localStorage.setItem("opened", "true");
       }
 
+      // Ketika tombol lihat undangan di klik.
       const btnOpen = document.querySelector(".hero .btn");
       btnOpen.addEventListener("click", (e) => {
+        // Jalankan fungsi berikut.
         enableScroll();
         e.stopPropagation();
+        // Selama undanga bisa discroll, putarkan audio.
         playAudio();
       });
 
+      // Fungsi putar audio
       function playAudio() {
         song.volume = 0.2;
+        // perlihatkan icon pause dan play
         audioIconWrapper.style.display = "flex";
         song.play();
+        // var untuk indikator music diputar bernilai true.
         isPlaying = true;
       }
 
+      // Fungsi ketika icon putar/pause di klik
       audioIconWrapper.onclick = () => {
         if (isPlaying) {
           song.pause();
@@ -512,7 +520,7 @@
           audioIcon.classList.remove("bi-pause-circle");
           audioIcon.classList.add("bi-disc");
         }
-
+        // var indikator pause/play di ditimpa.
         isPlaying = !isPlaying;
       };
       // if (!localStorage.getItem("opened")) {
@@ -522,6 +530,7 @@
     </script>
 
     <script>
+      // Script untuk mengirim data konfirmasi kehadiran ke Google SpreadSheet
       window.addEventListener("load", function () {
         const form = document.getElementById("my-form");
         form.addEventListener("submit", function (e) {
@@ -539,6 +548,7 @@
     </script>
 
     <script>
+      // Script untuk Query URL nama yang diundang
       const urlParams = new URLSearchParams(window.location.search);
       const nama = urlParams.get("n") || "";
       const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i";
