@@ -21,10 +21,11 @@
   color: var(--pink);
   font-family: "Sacramento";
   font-weight: bold;
-  font-size: 2.6rem;
 }
 
+.simply-countdown > .simply-section .simply-word {
+  font-size: 3rem;
+}
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 5rem;
-  color: var(--pink);
+  font-size: 3rem;
 }
